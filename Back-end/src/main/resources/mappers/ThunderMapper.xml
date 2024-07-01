@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.sweater.model.dao.ThunderDao">
+	<select id="selectAll" resultType="Thunder">
+		SELECT *
+		FROM thunder
+	</select>
+	
+	<select id="selectOne" resultType="Thunder" parameterType="int">
+		SELECT *
+		FROM thunder
+		WHERE thunder_id = #{thunderId}
+	</select>
+	
+	<select id="getThunderByNickname" resultType="Thunder" parameterType="string">
+		SELECT *
+		FROM thunder
+		WHERE writer = #{nickname}
+	</select>
+	
+	<select id="getThunderByTag" resultType="Thunder" parameterType="string">
+		SELECT *
+		FROM thunder
+		WHERE tag = #{tag}
+	</select>
+	
+	<select id="getThunderByRegion" resultType="Thunder" parameterType="string">
+		SELECT *
+		FROM thunder
+		WHERE region = #{region}
+	</select>
+	
+	<select id="getThunderByHeart" resultType="Thunder" parameterType="int">
+		SELECT *
+		FROM thunder
+		WHERE thunder_id = #{thunderId}
+	</select>
+	
+	<select id="getThunderIdByHeart" resultType="int" parameterType="string">
+		SELECT thunder_id
+		FROM thunder_heart
+		WHERE user_id = #{userId}
+	</select>
+	
+	<insert id="insertThunder" parameterType="Thunder">
+		INSERT INTO thunder (region, tag, writer, title, header, start_date, end_date, content, media, trail, hiking_time, hiking_dist)
+		VALUES(#{region}, #{tag}, #{writer}, #{title}, #{header}, #{startDate}, #{endDate},  #{content}, #{media}, #{trail}, #{hikingTime}, #{hikingDist})
+	</insert>
+	
+	<update id="updateThunder" parameterType="Thunder">
+	    UPDATE thunder
+	    SET title = #{title}, 
+	        header = #{header}, 
+	        start_date = #{startDate}, 
+	        end_date = #{endDate}, 
+	        content = #{content}
+	    WHERE thunder_id = #{thunderId}
+	</update>
+	<delete id="deleteThunder" parameterType="int">
+		DELETE 
+		FROM thunder
+		WHERE thunder_id = #{thunderId}
+	</delete>
+	
+	<select id="isHeart" parameterType="hashMap">
+		SELECT count(*)
+		FROM thunder_heart
+		WHERE user_id = #{userId} AND thunder_id = #{thunderId}
+	</select>
+	
+	<update id="heartUp" parameterType="int">
+		UPDATE thunder t
+		JOIN (SELECT heart FROM thunder WHERE thunder_id = #{thunderId}) AS sub
+		ON t.thunder_id = #{thunderId}
+		SET t.heart = sub.heart + 1
+		WHERE t.thunder_id = #{thunderId}
+	</update>
+	
+	<update id="heartDown" parameterType="int">
+		UPDATE thunder t
+		JOIN (SELECT heart FROM thunder WHERE thunder_id = #{thunderId}) AS sub
+		ON t.thunder_id = #{thunderId}
+		SET t.heart = sub.heart - 1
+		WHERE t.thunder_id = #{thunderId}
+	</update>
+	
+	<insert id="insertHeart" parameterType="hashMap">
+		INSERT INTO thunder_heart
+		VALUES(#{userId}, #{thunderId})
+	</insert>
+	
+	<delete id="deleteHeart" parameterType="hashMap">
+		DELETE
+		FROM thunder_heart
+		WHERE user_id = #{userId} AND thunder_id = #{thunderId}
+	</delete>
+	
+	<select id="checkHeart" resultType="int" parameterType="hashMap">
+		SELECT COUNT(*)
+		FROM thunder_heart
+		WHERE user_id = #{userId} AND thunder_id = #{thunderId}
+	</select>
+	
+</mapper>

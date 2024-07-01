@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.sweater.model.dao.AuthDao">
+	
+	<select id="idCheck" parameterType="String">
+		SELECT COUNT(*)
+		FROM user
+		WHERE user_id = #{userId}
+	</select>
+	
+	<insert id="add" parameterType="CheckCertification">
+		INSERT INTO certification
+		VALUES (#{userId}, #{email}, #{certificationNumber})
+	</insert>
+	
+	<select id="check" resultType="CheckCertification" parameterType="string">
+		SELECT *
+		FROM certification
+		WHERE user_id = #{userId}
+	</select>
+	
+	<delete id="delete" parameterType="string">
+		DELETE
+		FROM certification
+		WHERE user_id = #{userId}
+	</delete>
+	
+	<insert id="signUp" parameterType="SignUp">
+		INSERT INTO user(user_id, password, nickname, gender)
+		VALUES (#{userId}, #{password}, #{nickname}, #{gender})
+	</insert>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.sweater.model.dao.MountainDao">
+	
+	<select id="selectAll" parameterType="string">
+		SELECT m.name, m.region, d.fid, d.mntn_code, d.region, d.pmntn_lt, d.pmntn_dffl, 
+			   d.pmntn_uppl, d.pmntn_godn, d.paths
+		FROM mountain m, mtdetail d
+		WHERE m.code = d.mntn_code
+		AND m.code = #{mntnCode}
+	</select>
+	
+</mapper>

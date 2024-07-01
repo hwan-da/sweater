@@ -1,0 +1,19 @@
+/** 모바일 세로 */
+@media screen and (max-width: 480px) {
+}
+
+/** 모바일 가로, 타블렛 세로 */
+@media screen and (max-width: 768px) {
+}
+
+/** 타블렛 가로, 노트북 */
+@media screen and (max-width: 1024px) {
+}
+
+/** 타블렛 가로, 노트북 */
+@media screen and (max-width: 1280px) {
+}
+
+/** 데스크탑 */
+@media screen and (min-width: 1281px) {
+}
