@@ -35,40 +35,40 @@
 1. **Main**
    - 추천 컨텐츠 및 신규 게시글을 볼 수 있는 섹션이 있습니다.
    - Nav의 심볼을 누르면 애니메이션과 함께 Main 페이지로 이동합니다.
-   ![Main Page](https://drive.google.com/file/d/1hg3qd4u_E7HMKTxJ3lbEkKXtIowLTllu/view?usp=sharing)
+   ![Main Page](https://drive.google.com/file/d/1hg3qd4u_E7HMKTxJ3lbEkKXtIowLTllu)
 2. **Sign up**
    - ID, 패스워드, 닉네임을 DB와 비교하여 유효성 검사를 진행하며, 통과하지 못한 경우 경고 문구가 표시됩니다.
    - 이메일 인증으로 인증번호를 받아 인증 후 가입 가능하도록 구현했습니다.
-   ![Sign up](https://drive.google.com/file/d/1IhSYqQRPE_Zu0JaDk3LwcldCs5MJrRvf/view?usp=sharing)
+   ![Sign up](https://drive.google.com/file/d/1IhSYqQRPE_Zu0JaDk3LwcldCs5MJrRvf)
 3. **Log In**
    - DB에서 회원 정보를 찾아, 로그인 할 수 있습니다.
    - 카카오 소셜 로그인을 구현했습니다.
-   ![Log In](https://drive.google.com/file/d/1MdlCEf_7UJK6uobEe5W3c-abuMxghHQY/view?usp=sharing)
+   ![Log In](https://drive.google.com/file/d/1MdlCEf_7UJK6uobEe5W3c-abuMxghHQY)
 4. **My Page**
    - 사진을 클릭하면 프로필 이미지를 변경할 수 있습니다.
    - 자기소개글을 등록 및 수정할 수 있습니다.
    - 나의 게시글과 댓글 목록, 좋아요한 게시글, 댓글 목록, 메시지를 확인할 수 있습니다.
-   ![My Page](https://drive.google.com/file/d/1OAgYHBhzzfWuLK0AOpANjqrPy2zatwCR/view?usp=sharing)
+   ![My Page](https://drive.google.com/file/d/1OAgYHBhzzfWuLK0AOpANjqrPy2zatwCR)
 5. **Video**
    - AI 챗봇과 대화할 수 있습니다.
    - 동영상을 검색할 수 있습니다.
-   ![Video](https://drive.google.com/file/d/15tjalY3qNkcyVtU-37vkdRksR_IB94Q3/view?usp=sharing)
+   ![Video](https://drive.google.com/file/d/15tjalY3qNkcyVtU-37vkdRksR_IB94Q3)
 6. **Board**
    - 지역과 산으로 게시글을 필터링 할 수 있습니다.
-   ![Board1](https://drive.google.com/file/d/15tjalY3qNkcyVtU-37vkdRksR_IB94Q3/view?usp=sharing)
+   ![Board1](https://drive.google.com/file/d/15tjalY3qNkcyVtU-37vkdRksR_IB94Q3)
    - 로그인 한 상태에서 내가 작성하지 않은 글이라면, 좋아요를 누를 수 있습니다.
    - 댓글을 작성할 수 있습니다.
-   ![Board2](https://drive.google.com/file/d/1k6RP9qPBWBitgTpr628mCwHUql8C4wdw/view?usp=sharing)
+   ![Board2](https://drive.google.com/file/d/1k6RP9qPBWBitgTpr628mCwHUql8C4wdw)
    - 작성 시 지도를 커스터마이징해서 나만의 등산로를 생성할 수 있습니다. 나만의 등산로는 DB에 게시글과 연동되어 저장됩니다.
-   ![Board3](https://drive.google.com/file/d/1LCun0U9q6DqXMZsgCu4peRORekeTRhs_/view?usp=sharing)
+   ![Board3](https://drive.google.com/file/d/1LCun0U9q6DqXMZsgCu4peRORekeTRhs_)
 7. **Thunder**
    - 지역과 산으로 게시글을 필터링 할 수 있습니다.
    - 로그인 한 상태에서 내가 작성하지 않은 글이라면, 좋아요를 누를 수 있습니다.
    - 댓글을 작성할 수 있습니다.
    - 작성 시 지도를 커스터마이징해서 나만의 등산로를 생성할 수 있습니다. 나만의 등산로는 DB에 게시글과 연동되어 저장됩니다.
-   ![Thunder](https://drive.google.com/file/d/1P2O0RSYL6G7HOV9SO1TCRI0POa23V_6J/view?usp=sharing)
+   ![Thunder](https://drive.google.com/file/d/1P2O0RSYL6G7HOV9SO1TCRI0POa23V_6J)
    - 댓글을 통해 유저와 소통할 수 있으며, Invite를 통해 생성한 메시지는 My Page에서 확인할 수 있습니다.
-   ![Invite](https://drive.google.com/file/d/1TfjQCrGKUjEkuHLcmNnZ-p4xXuq0qvaj/view?usp=sharing)
+   ![Invite](https://drive.google.com/file/d/1TfjQCrGKUjEkuHLcmNnZ-p4xXuq0qvaj)
 
 ## 후기
 
