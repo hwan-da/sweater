@@ -38,7 +38,7 @@ public class AuthRestController {
 	private final UserService userService;
 	private final JwtUtil jwtUtil;
 	
-	private final String CLIENT_ID = "6728c736efecf33334135e277945c52f";
+	private final String CLIENT_ID = "privatekey";
 	private final String REDIRECT_URI = "http://localhost:5173/kakao";
 	
 	
